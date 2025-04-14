@@ -16,12 +16,12 @@
 「自然言語処理を用いたタスク自動分類」をテーマとした卒業研究の一環で制作しました。ユーザーが予定を言葉で入力するだけで、煩雑な登録作業を軽減することを目的としています。
 
 # セットアップ
-git clone https://github.com/HT22A049/graduation-research
-cd graduation-research
-npm install
-npm start
+- git clone https://github.com/HT22A049/graduation-research
+- cd graduation-research
+- npm install
+- npm start
 
 # 備考
-Google CloudのAPIキーが必要です。.envファイルに設定してください。
+- Google CloudのAPIキーが必要です。.envファイルに設定してください。
 
-WSL2環境で開発・動作確認済み。
+- WSL2環境で開発・動作確認済み。
