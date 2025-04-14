@@ -1,0 +1,132 @@
+/* 全体の背景色を追加 */
+body {
+  background-color: #f7f9fc; /* 柔らかい青系の背景色 */
+  font-family: 'Arial', sans-serif; /* 読みやすいフォントを適用 */
+  color: #333; /* 濃い灰色で文字をはっきり */
+  margin: 0;
+  padding: 0;
+}
+
+
+/* 親コンテナ */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 中央寄せ */
+  margin: 10px;
+  padding: 20px;
+  max-width: 700px; /* 最大幅を指定 */
+  background: #ffffff;
+  border-radius: 8px; /* コーナーを丸める */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
+}
+
+/* 入力ボックス */
+textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 入力欄に影を追加 */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #0088ff;
+  outline: none;
+  box-shadow: 0 4px 8px rgba(0, 136, 255, 0.2); /* フォーカス時に光る効果 */
+}
+
+/* モーダルの内容全体 */
+.ReactModal__Content {
+  padding: 20px; /* モーダル全体のパディング */
+  border-radius: 10px; /* モーダルの角を丸める */
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* モーダル内の文章 */
+.ReactModal__Content div {
+  margin-bottom: 20px; /* 「閉じる」ボタンとの間隔を追加 */
+  font-size: 1rem;
+  color: #333;
+}
+
+/* ボタン全般 */
+button {
+  margin-top: 5px;
+  font-size: 1em;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #00b4db, #0083b0);
+  color: white;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-left: 5px; /* ボタン間のスペース */
+}
+
+/* ボタンを横並びに */
+.button-container {
+  display: flex;
+  flex-direction: row; /* 横並び */
+  gap: 10px; /* ボタン間の隙間を調整 */
+  justify-content: flex-start; /* 左寄せ */
+  align-items: center; /* ボタンを上下中央揃え */
+}
+
+button:hover {
+  background: linear-gradient(135deg, #0083b0, #005f80); /* ホバー時に濃い色へ */
+  transform: translateY(-2px); /* 浮かび上がるエフェクト */
+}
+
+button:active {
+  transform: translateY(1px); /* 押し込む効果 */
+}
+
+/* Todoリスト */
+.todo-list-container ul {
+  list-style-type: none; /* デフォルトの箇条書きを削除 */
+  padding: 0;
+  width: 100%;
+}
+
+.todo-list-container li {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative; /* 矢印用の位置調整 */
+  flex-direction: column; /* 子要素を縦並びに */
+  gap: 10px; /* 各要素間の隙間を追加 */
+}
+
+/* タスクの締切部分 */
+.task-deadline {
+  margin-right: 20px; /* ボタンとの間隔を広げる */
+  display: inline-block;
+  font-size: 0.9em; /* 少し小さくして明確化 */
+  color: #555; /* 少し薄めの色 */
+}
+
+.todo-list-container li:hover {
+  transform: translateY(-3px); /* ホバー時に浮くエフェクト */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 影を濃く */
+}
+
+/* タスクの前に矢印を追加 */
+.todo-list-container li::before {
+  content: "➢ "; /* 矢印のアイコン */
+  color: #0088cc; /* 矢印の色 */
+  font-weight: bold; /* 強調 */
+  margin-right: 5px; /* 矢印とテキストの間隔 */
+}
+
+/* 完了済みのタスク */
+.done {
+  text-decoration: line-through;
+  color: #aaa; /* 色を薄くする */
+}
