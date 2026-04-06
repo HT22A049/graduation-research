@@ -66,8 +66,3 @@ npm start
 cd server
 npm install
 node server.js
-
-# 備考
-- Google CloudのAPIキーが必要です。.envファイルに設定してください。
-
-- WSL2環境で開発・動作確認済み。
